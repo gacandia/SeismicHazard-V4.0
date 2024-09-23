@@ -1,0 +1,36 @@
+Option 0 - Global Parameters
+Projection   : WGS84
+Image        : california.mat
+Boundary     : CAL_adm1.shp
+ShearModulus : 3e11      #dyne/cm2
+IM           : 0
+im           : 
+MaxDistance  : 500 500 70 500
+MagDiscrete  : gauss 7
+Sigma        : truncate 3
+Fields       : 0.01 1
+Spatial      : 
+Spectral     : 
+SourceDeagg  : on
+
+Option 1 - Logic Tree Weights
+Geom Weight : 1
+Gmpe Weight : 1
+Mscl Weight : 1 
+
+Option 2 - Source Geometry
+geometry 1
+call UCERF3_FM31_source.txt
+                                                     
+Option 3 - GMPE Library
+gmm I2014 I2014 auto
+
+Option 4 - GMPE GROUPS
+gmmgroup I2014 1
+
+Option 5 - MAGNITUDE SCALING RELATIONS
+seismicity 1
+call UCERF3_FM31_MR.txt
+
+Option 6 - Pre defined sites (Optional)
+site1 -122.309  37.879 0.0 VS30 760 Z25 0.607                                                                                                                                                                     
